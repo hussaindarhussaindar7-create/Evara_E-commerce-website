@@ -1,43 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
-    <link rel="stylesheet" href="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== FLATICON ===============-->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
-  </head>
-  <body>
-    <!--=============== HEADER ===============-->
-    <header class="header"></header>
+  <title>My Account - Evara Ecommerce</title>
+</head>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb"></section>
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <div class="header__top">
+      <div class="header__container container">
+        <div class="header__contact">
+          <span>(+92)-34260-51242</span>
+          <span>Our location</span>
+        </div>
+        <p class="header__alert-news">
+          Super Value Deals - Save more with coupons
+        </p>
+        <a href="login-register.html" class="header__top-action">
+          Log In / Sign Up
+        </a>
+      </div>
+    </div>
 
-      <!--=============== ACCOUNTS ===============-->
-      <section class="accounts"></section>
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="assets/img/logo.svg" alt="">
+          </a>
+          <div class="nav__close" id="nav-close">
+            <i class="fi fi-rs-cross-small"></i>
+          </div>
+        </div>
 
-      <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter"></section>
-    </main>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer"></footer>
+          <li class="nav__item">
+            <a href="shop.html" class="nav__link">Shop</a>
+          </li>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+          <li class="nav__item">
+            <a href="accounts.html" class="nav__link active-link">My Account</a>
+          </li>
 
-    <!--=============== MAIN JS ===============-->
-    <script src=""></script>
-  </body>
+          <li class="nav__item">
+            <a href="compare.html" class="nav__link">Compare</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="login-register.html" class="nav__link">Login</a>
+          </li>
+        </ul>
+
+        <div class="header__search">
+          <input type="text" placeholder="Search for items..." class="form__input">
+          <button class="search__btn">
+            <img src="assets/img/search.png" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="wishlist.html" class="header__action-btn">
+          <img src="assets/img/icon-heart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <a href="cart.html" class="header__action-btn">
+          <img src="assets/img/icon-cart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <div class="header__action-btn nav__toggle" id="nav-toggle">
+          <img src="assets/img/menu-burger.svg" alt="">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <!--=============== BREADCRUMB ===============-->
+    <section class="breadcrumb">
+      <ul class="breadcrumb__list flex container">
+        <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><span class="breadcrumb__link">My Account</span></li>
+      </ul>
+    </section>
+
+    <!--=============== ACCOUNTS ===============-->
+    <section class="accounts section--lg container">
+      <div class="accounts__container grid">
+        <!-- Sidebar Tabs -->
+        <div class="account__tabs">
+          <p class="account__tab active-tab" data-account-target="#dashboard">
+            <i class="fi fi-rs-settings-sliders"></i> Dashboard
+          </p>
+          <p class="account__tab" data-account-target="#orders">
+            <i class="fi fi-rs-shopping-bag"></i> Orders
+          </p>
+          <p class="account__tab" data-account-target="#update-profile">
+            <i class="fi fi-rs-user"></i> Update Profile
+          </p>
+          <p class="account__tab" data-account-target="#address">
+            <i class="fi fi-rs-marker"></i> My Address
+          </p>
+          <p class="account__tab" data-account-target="#change-password">
+            <i class="fi fi-rs-lock"></i> Change Password
+          </p>
+          <a href="login-register.html" class="account__tab">
+            <i class="fi fi-rs-sign-out-alt"></i> Logout
+          </a>
+        </div>
+
+        <!-- Tab Content Panes -->
+        <div class="account__panes">
+          <!-- Pane 1: Dashboard -->
+          <div class="account__tab-content active-tab" id="dashboard" data-account-content>
+            <div class="account__box">
+              <h3 class="account__user">Hello <span>Rosie</span>!</h3>
+              <p class="account__welcome-text">
+                From your account dashboard you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.
+              </p>
+              <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                <a href="shop.html" class="btn btn--md">Start Shopping</a>
+                <a href="cart.html" class="btn btn--md btn--sub">View Cart</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Orders -->
+          <div class="account__tab-content" id="orders" data-account-content>
+            <div class="account__box">
+              <h3 class="section__title">Your <span>Orders</span></h3>
+              <div class="table__container" style="margin-bottom: 0;">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Order</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>#1357</strong></td>
+                      <td>March 15, 2026</td>
+                      <td><span class="badge--stock badge--in-stock">Processing</span></td>
+                      <td>$238.85 for 1 item</td>
+                      <td><a href="#" class="btn btn--sm btn--sub" style="padding-inline: 0.75rem; height: 35px; line-height: 35px;">View</a></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#2468</strong></td>
+                      <td>February 28, 2026</td>
+                      <td><span class="badge--stock badge--in-stock">Completed</span></td>
+                      <td>$360.75 for 2 items</td>
+                      <td><a href="#" class="btn btn--sm btn--sub" style="padding-inline: 0.75rem; height: 35px; line-height: 35px;">View</a></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#4366</strong></td>
+                      <td>January 12, 2026</td>
+                      <td><span class="badge--stock badge--in-stock">Completed</span></td>
+                      <td>$199.50 for 1 item</td>
+                      <td><a href="#" class="btn btn--sm btn--sub" style="padding-inline: 0.75rem; height: 35px; line-height: 35px;">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Update Profile -->
+          <div class="account__tab-content" id="update-profile" data-account-content>
+            <div class="account__box">
+              <h3 class="section__title">Update <span>Profile</span></h3>
+              <form action="" class="form grid">
+                <div class="flex" style="gap: 1.5rem; align-items: center; margin-bottom: 1rem;">
+                  <img src="assets/img/avatar-1.jpg" alt="Profile" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--first-color);">
+                  <div>
+                    <h4 style="margin-bottom: 0.25rem;">Rosie Perez</h4>
+                    <p style="font-size: var(--small-font-size); color: var(--text-color-light);">rosie.perez@example.com</p>
+                  </div>
+                </div>
+
+                <div class="form__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+                  <div class="form__group">
+                    <label class="form__label">Username</label>
+                    <input type="text" value="rosie_perez" class="form__input">
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label">Display Name</label>
+                    <input type="text" value="Rosie Perez" class="form__input">
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label">Email Address</label>
+                  <input type="email" value="rosie.perez@example.com" class="form__input">
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn--md">Save Changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Pane 4: My Address -->
+          <div class="account__tab-content" id="address" data-account-content>
+            <div class="account__box">
+              <h3 class="section__title">My <span>Addresses</span></h3>
+              <div class="address__cards grid">
+                <div class="address__card">
+                  <h4 class="address__title">Billing Address</h4>
+                  <div class="address__data">
+                    <p><strong>Rosie Perez</strong></p>
+                    <p>562 Wellington Road, Suite 32</p>
+                    <p>San Francisco, CA 94107</p>
+                    <p>United States</p>
+                    <p style="margin-top: 0.5rem;">Phone: (+92)-34260-51242</p>
+                  </div>
+                  <a href="#" class="btn btn--md btn--sub" style="padding-inline: 1rem; height: 38px; line-height: 38px;">Edit Address</a>
+                </div>
+
+                <div class="address__card">
+                  <h4 class="address__title">Shipping Address</h4>
+                  <div class="address__data">
+                    <p><strong>Rosie Perez</strong></p>
+                    <p>742 Evergreen Terrace</p>
+                    <p>Springfield, OR 97477</p>
+                    <p>United States</p>
+                    <p style="margin-top: 0.5rem;">Phone: (+92)-34260-51242</p>
+                  </div>
+                  <a href="#" class="btn btn--md btn--sub" style="padding-inline: 1rem; height: 38px; line-height: 38px;">Edit Address</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 5: Change Password -->
+          <div class="account__tab-content" id="change-password" data-account-content>
+            <div class="account__box">
+              <h3 class="section__title">Change <span>Password</span></h3>
+              <form action="" class="form grid">
+                <div class="form__group">
+                  <label class="form__label">Current Password <span>*</span></label>
+                  <input type="password" placeholder="Enter current password" class="form__input" required>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label">New Password <span>*</span></label>
+                  <input type="password" placeholder="Enter new password" class="form__input" required>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label">Confirm New Password <span>*</span></label>
+                  <input type="password" placeholder="Confirm new password" class="form__input" required>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn--md">Update Password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== NEWSLETTER ===============-->
+    <section class="newsletter section">
+      <div class="newsletter__container container">
+        <div class="newsletter__content">
+          <h3 class="newsletter__title">
+            <img src="assets/img/icon-email.svg" alt="" class="newsletter__icon">
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and receive $25 coupon for first shopping.
+          </p>
+        </div>
+
+        <form action="" class="newsletter__form">
+          <input type="email" placeholder="Enter your email" class="newsletter__input" required>
+          <button type="submit" class="newsletter__btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+        </a>
+        <h4 class="footer__subtitle">Contact</h4>
+        <p class="footer__description">
+          <span>Address:</span> 562 Wellington Road, Street 32, San Francisco
+        </p>
+        <p class="footer__description">
+          <span>Phone:</span> (+92)-34260-51242 / (+01) 2345 6789
+        </p>
+        <p class="footer__description">
+          <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+        </p>
+        <div class="footer__social">
+          <h4 class="footer__subtitle">Follow Us</h4>
+          <div class="footer__social-links flex">
+            <a href="#"><img src="assets/img/icon-facebook.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-twitter.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-instagram.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-pinterest.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-youtube.svg" alt="" class="footer__social-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Address</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">About Us</a></li>
+          <li><a href="#" class="footer__link">Delivery Information</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__link">Contact Us</a></li>
+          <li><a href="#" class="footer__link">Support Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">My Account</h3>
+        <ul class="footer__links">
+          <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+          <li><a href="cart.html" class="footer__link">View Cart</a></li>
+          <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+          <li><a href="accounts.html" class="footer__link">Track My Order</a></li>
+          <li><a href="#" class="footer__link">Help</a></li>
+          <li><a href="checkout.html" class="footer__link">Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Secured Payment Gateways</h3>
+        <p class="footer__description">Save 15% with Evara App & Payment Partner</p>
+        <img src="assets/img/payment-method.png" alt="" class="payment__img">
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p class="copyright">&copy; 2026 Evara. All rights reserved.</p>
+      <span class="designer">Designed with <span>&hearts;</span> for Fashion & Lifestyle</span>
+    </div>
+  </footer>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

@@ -1,49 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
-    <link rel="stylesheet" href="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== FLATICON ===============-->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
-  </head>
-  <body>
-    <!--=============== HEADER ===============-->
-    <header class="header"></header>
+  <title>Product Details - Evara Ecommerce</title>
+</head>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb"></section>
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <div class="header__top">
+      <div class="header__container container">
+        <div class="header__contact">
+          <span>(+92)-34260-51242</span>
+          <span>Our location</span>
+        </div>
+        <p class="header__alert-news">
+          Super Value Deals - Save more with coupons
+        </p>
+        <a href="login-register.html" class="header__top-action">
+          Log In / Sign Up
+        </a>
+      </div>
+    </div>
 
-      <!--=============== DETAILS ===============-->
-      <section class="details"></section>
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="assets/img/logo.svg" alt="">
+          </a>
+          <div class="nav__close" id="nav-close">
+            <i class="fi fi-rs-cross-small"></i>
+          </div>
+        </div>
 
-      <!--=============== DETAILS TAB ===============-->
-      <section class="details__tab"></section>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
 
-      <!--=============== PRODUCTS ===============-->
-      <section class="products"></section>
+          <li class="nav__item">
+            <a href="shop.html" class="nav__link active-link">Shop</a>
+          </li>
 
-      <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter"></section>
-    </main>
+          <li class="nav__item">
+            <a href="accounts.html" class="nav__link">My Account</a>
+          </li>
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer"></footer>
+          <li class="nav__item">
+            <a href="compare.html" class="nav__link">Compare</a>
+          </li>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+          <li class="nav__item">
+            <a href="login-register.html" class="nav__link">Login</a>
+          </li>
+        </ul>
 
-    <!--=============== MAIN JS ===============-->
-    <script src=""></script>
-  </body>
+        <div class="header__search">
+          <input type="text" placeholder="Search for items..." class="form__input">
+          <button class="search__btn">
+            <img src="assets/img/search.png" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="wishlist.html" class="header__action-btn">
+          <img src="assets/img/icon-heart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <a href="cart.html" class="header__action-btn">
+          <img src="assets/img/icon-cart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <div class="header__action-btn nav__toggle" id="nav-toggle">
+          <img src="assets/img/menu-burger.svg" alt="">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <!--=============== BREADCRUMB ===============-->
+    <section class="breadcrumb">
+      <ul class="breadcrumb__list flex container">
+        <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><a href="shop.html" class="breadcrumb__link">Shop</a></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><span class="breadcrumb__link">Clothing</span></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><span class="breadcrumb__link">Henley Casual Shirt</span></li>
+      </ul>
+    </section>
+
+    <!--=============== DETAILS ===============-->
+    <section class="details section--lg">
+      <div class="details__container container grid">
+        <!-- Gallery -->
+        <div class="details__group">
+          <img src="assets/img/product-1-1.jpg" alt="Henley Casual Shirt" class="details__img">
+          <div class="details__small-images grid">
+            <img src="assets/img/product-1-1.jpg" alt="" class="details__small-img active-small-img">
+            <img src="assets/img/product-1-2.jpg" alt="" class="details__small-img">
+            <img src="assets/img/product-2-1.jpg" alt="" class="details__small-img">
+            <img src="assets/img/product-3-1.jpg" alt="" class="details__small-img">
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="details__group">
+          <h2 class="details__title">Henley Long Sleeve Casual Shirt</h2>
+          <p class="details__brand">Brands: <span>Adidas</span></p>
+
+          <div class="product__rating flex" style="margin-bottom: 1rem;">
+            <div>
+              <i class="fi fi-rs-star"></i>
+              <i class="fi fi-rs-star"></i>
+              <i class="fi fi-rs-star"></i>
+              <i class="fi fi-rs-star"></i>
+              <i class="fi fi-rs-star"></i>
+            </div>
+            <span style="font-size: var(--smaller-font-size); color: var(--text-color-light); margin-left: 0.5rem;">(24 customer reviews)</span>
+          </div>
+
+          <div class="details__price">
+            <span class="new__price">$238.85</span>
+            <span class="old__price">$245.80</span>
+            <span class="save__price">25% Off</span>
+          </div>
+
+          <p class="short__description">
+            Elevate your everyday wardrobe with our premium cotton blended Henley shirt. Designed for all-day comfort and effortless modern style, featuring refined stitching, breathable weave, and tailored horn buttons.
+          </p>
+
+          <ul class="product__list">
+            <li class="list__item">
+              <i class="fi fi-rs-check"></i> 1 Year Warranty & Guarantee
+            </li>
+            <li class="list__item">
+              <i class="fi fi-rs-check"></i> 30 Day Free Return Policy
+            </li>
+            <li class="list__item">
+              <i class="fi fi-rs-check"></i> Cash on Delivery available
+            </li>
+          </ul>
+
+          <div class="details__color">
+            <span class="details__color-title">Color</span>
+            <ul class="color__list">
+              <li><span class="color__link active-color" style="background-color: hsl(176, 88%, 27%);" title="Teal Green"></span></li>
+              <li><span class="color__link" style="background-color: hsl(34, 94%, 87%);" title="Warm Peach"></span></li>
+              <li><span class="color__link" style="background-color: hsl(210, 29%, 24%);" title="Navy"></span></li>
+              <li><span class="color__link" style="background-color: hsl(352, 70%, 50%);" title="Crimson"></span></li>
+            </ul>
+          </div>
+
+          <div class="details__size">
+            <span class="details__size-title">Size</span>
+            <ul class="size__list">
+              <li><span class="size__link size-active">M</span></li>
+              <li><span class="size__link">L</span></li>
+              <li><span class="size__link">XL</span></li>
+              <li><span class="size__link">XXL</span></li>
+            </ul>
+          </div>
+
+          <div class="details__action">
+            <div class="quantity">
+              <span class="quantity__btn quantity__minus"><i class="fi fi-rs-minus"></i></span>
+              <input type="text" class="quantity__input" value="1" readonly>
+              <span class="quantity__btn quantity__plus"><i class="fi fi-rs-plus"></i></span>
+            </div>
+
+            <a href="cart.html" class="btn btn--md">Add To Cart</a>
+            <a href="wishlist.html" class="details__action-btn" aria-label="Add to Wishlist"><i class="fi fi-rs-heart"></i></a>
+            <a href="compare.html" class="details__action-btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+          </div>
+
+          <ul class="details__meta">
+            <li class="meta__list"><span>SKU:</span> FWM15VKT</li>
+            <li class="meta__list"><span>Tags:</span> Cloth, Men, Casual, Cotton, Summer</li>
+            <li class="meta__list"><span>Availability:</span> 8 Items In Stock</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== DETAILS TAB ===============-->
+    <section class="details__tab container">
+      <div class="detail__tabs">
+        <span class="detail__tab active-tab" data-detail-target="#info">Description</span>
+        <span class="detail__tab" data-detail-target="#additional">Additional Info</span>
+        <span class="detail__tab" data-detail-target="#reviews">Reviews (3)</span>
+      </div>
+
+      <div class="details__tabs-content">
+        <!-- Description Pane -->
+        <div class="details__tab-content active-tab" id="info" data-detail-content>
+          <div class="tab__description">
+            <p style="margin-bottom: 1rem;">
+              Made from a heavyweight organic cotton jersey that feels soft against the skin, this Henley shirt has a relaxed fit with dropped shoulders and ribbed cuffs. The button placket features tonal corozo buttons for a clean, understated finish that transitions effortlessly from day to night.
+            </p>
+            <p style="margin-bottom: 1rem;">
+              Crafted with reinforced double stitching across the neckline and shoulder seams to prevent stretching and ensure long-lasting durability through repeated wash cycles. Pair it casually with denim or layer it under our unstructured jackets for smart casual versatility.
+            </p>
+            <h4 style="margin-block: 1.5rem 0.75rem; font-size: var(--normal-font-size);">Care & Maintenance:</h4>
+            <ul style="line-height: 1.8; font-size: var(--small-font-size);">
+              <li>• Machine wash at max 30°C / 85°F with similar colors.</li>
+              <li>• Do not bleach or tumble dry on high heat.</li>
+              <li>• Iron inside-out at medium temperature (max 150°C / 300°F).</li>
+              <li>• Dry flat in shade to preserve color intensity and shape.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Info Pane -->
+        <div class="details__tab-content" id="additional" data-detail-content>
+          <table class="info__table">
+            <tbody>
+              <tr>
+                <th>Stand Up</th>
+                <td>35″L x 24″W x 37-45″H(front to back wheel)</td>
+              </tr>
+              <tr>
+                <th>Folded (w/o wheels)</th>
+                <td>32.5″L x 18.5″W x 16.5″H</td>
+              </tr>
+              <tr>
+                <th>Folded (w/ wheels)</th>
+                <td>32.5″L x 24″W x 18.5″H</td>
+              </tr>
+              <tr>
+                <th>Material</th>
+                <td>100% Organic Pima Cotton</td>
+              </tr>
+              <tr>
+                <th>Origin</th>
+                <td>Imported / Hand finished</td>
+              </tr>
+              <tr>
+                <th>Fit</th>
+                <td>Regular Athletic Fit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Reviews Pane -->
+        <div class="details__tab-content" id="reviews" data-detail-content>
+          <div class="reviews__container grid">
+            <div class="review__list">
+              <!-- Review 1 -->
+              <div class="review__item">
+                <img src="assets/img/avatar-1.jpg" alt="" class="review__img">
+                <div class="review__data">
+                  <div class="review__header">
+                    <h4 class="review__title">Jack Steve</h4>
+                    <span class="review__date">December 4, 2025 at 3:12 pm</span>
+                  </div>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                  </div>
+                  <p class="review__description">
+                    Outstanding fabric feel! It fits true to size and after two washes the shape and color remain just as sharp. Will definitely be ordering in another color.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="review__item">
+                <img src="assets/img/avatar-2.jpg" alt="" class="review__img">
+                <div class="review__data">
+                  <div class="review__header">
+                    <h4 class="review__title">Sarah Jenkins</h4>
+                    <span class="review__date">January 15, 2026 at 11:45 am</span>
+                  </div>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                  </div>
+                  <p class="review__description">
+                    Super soft and breathable. The buttons and stitching feel premium. Received so many compliments at work!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="review__item">
+                <img src="assets/img/avatar-3.jpg" alt="" class="review__img">
+                <div class="review__data">
+                  <div class="review__header">
+                    <h4 class="review__title">David Mitchell</h4>
+                    <span class="review__date">February 20, 2026 at 6:30 pm</span>
+                  </div>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+                  </div>
+                  <p class="review__description">
+                    Fast shipping and top tier packaging. The teal shade matches the product photography perfectly. 10/10 quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Review Form -->
+            <div class="review__form">
+              <h4 class="review__form-title">Add a Review</h4>
+              <div class="rate__product flex">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <form action="" class="form grid">
+                <textarea class="form__input form__textarea" placeholder="Write Comment" rows="4" required></textarea>
+                <div class="form__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <input type="text" placeholder="Name" class="form__input" required>
+                  <input type="email" placeholder="Email" class="form__input" required>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn--md">Submit Review</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== RELATED PRODUCTS ===============-->
+    <section class="products section--lg container">
+      <h3 class="section__title">Related <span>Products</span></h3>
+
+      <div class="products__container grid">
+        <!-- Product 1 -->
+        <div class="product__item">
+          <div class="product__banner">
+            <a href="details.html" class="product__images">
+              <img src="assets/img/product-2-1.jpg" alt="" class="product__img default">
+              <img src="assets/img/product-2-2.jpg" alt="" class="product__img hover">
+            </a>
+            <div class="product__actions">
+              <a href="details.html" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+              <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-rs-heart"></i></a>
+              <a href="compare.html" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+            </div>
+            <div class="product__badge light-green">-30%</div>
+          </div>
+          <div class="product__content">
+            <span class="product__category">Clothing</span>
+            <a href="details.html"><h3 class="product__title">Plain Summer Cotton Tee</h3></a>
+            <div class="product__rating">
+              <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+            </div>
+            <div class="product__price flex">
+              <span class="new__price">$120.25</span>
+              <span class="old__price">$150.0</span>
+            </div>
+            <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product__item">
+          <div class="product__banner">
+            <a href="details.html" class="product__images">
+              <img src="assets/img/product-3-1.jpg" alt="" class="product__img default">
+              <img src="assets/img/product-3-2.jpg" alt="" class="product__img hover">
+            </a>
+            <div class="product__actions">
+              <a href="details.html" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+              <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-rs-heart"></i></a>
+              <a href="compare.html" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+            </div>
+            <div class="product__badge light-orange">-22%</div>
+          </div>
+          <div class="product__content">
+            <span class="product__category">Clothing</span>
+            <a href="details.html"><h3 class="product__title">Vintage Floral Blouse</h3></a>
+            <div class="product__rating">
+              <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+            </div>
+            <div class="product__price flex">
+              <span class="new__price">$175.00</span>
+              <span class="old__price">$210.0</span>
+            </div>
+            <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product__item">
+          <div class="product__banner">
+            <a href="details.html" class="product__images">
+              <img src="assets/img/product-4-1.jpg" alt="" class="product__img default">
+              <img src="assets/img/product-4-2.jpg" alt="" class="product__img hover">
+            </a>
+            <div class="product__actions">
+              <a href="details.html" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+              <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-rs-heart"></i></a>
+              <a href="compare.html" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+            </div>
+            <div class="product__badge light-blue">New</div>
+          </div>
+          <div class="product__content">
+            <span class="product__category">Clothing</span>
+            <a href="details.html"><h3 class="product__title">Casual Knit Cardigan</h3></a>
+            <div class="product__rating">
+              <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+            </div>
+            <div class="product__price flex">
+              <span class="new__price">$199.50</span>
+              <span class="old__price">$230.0</span>
+            </div>
+            <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product__item">
+          <div class="product__banner">
+            <a href="details.html" class="product__images">
+              <img src="assets/img/product-7-1.jpg" alt="" class="product__img default">
+              <img src="assets/img/product-7-2.jpg" alt="" class="product__img hover">
+            </a>
+            <div class="product__actions">
+              <a href="details.html" class="action__btn" aria-label="Quick View"><i class="fi fi-rs-eye"></i></a>
+              <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-rs-heart"></i></a>
+              <a href="compare.html" class="action__btn" aria-label="Compare"><i class="fi fi-rs-shuffle"></i></a>
+            </div>
+            <div class="product__badge light-pink">Hot</div>
+          </div>
+          <div class="product__content">
+            <span class="product__category">Clothing</span>
+            <a href="details.html"><h3 class="product__title">Casual Denim Jacket</h3></a>
+            <div class="product__rating">
+              <i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i><i class="fi fi-rs-star"></i>
+            </div>
+            <div class="product__price flex">
+              <span class="new__price">$210.00</span>
+              <span class="old__price">$250.0</span>
+            </div>
+            <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-rs-shopping-bag-add"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== NEWSLETTER ===============-->
+    <section class="newsletter section">
+      <div class="newsletter__container container">
+        <div class="newsletter__content">
+          <h3 class="newsletter__title">
+            <img src="assets/img/icon-email.svg" alt="" class="newsletter__icon">
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and receive $25 coupon for first shopping.
+          </p>
+        </div>
+
+        <form action="" class="newsletter__form">
+          <input type="email" placeholder="Enter your email" class="newsletter__input" required>
+          <button type="submit" class="newsletter__btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+        </a>
+        <h4 class="footer__subtitle">Contact</h4>
+        <p class="footer__description">
+          <span>Address:</span> 562 Wellington Road, Street 32, San Francisco
+        </p>
+        <p class="footer__description">
+          <span>Phone:</span> (+92)-34260-51242 / (+01) 2345 6789
+        </p>
+        <p class="footer__description">
+          <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+        </p>
+        <div class="footer__social">
+          <h4 class="footer__subtitle">Follow Us</h4>
+          <div class="footer__social-links flex">
+            <a href="#"><img src="assets/img/icon-facebook.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-twitter.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-instagram.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-pinterest.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-youtube.svg" alt="" class="footer__social-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Address</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">About Us</a></li>
+          <li><a href="#" class="footer__link">Delivery Information</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__link">Contact Us</a></li>
+          <li><a href="#" class="footer__link">Support Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">My Account</h3>
+        <ul class="footer__links">
+          <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+          <li><a href="cart.html" class="footer__link">View Cart</a></li>
+          <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+          <li><a href="accounts.html" class="footer__link">Track My Order</a></li>
+          <li><a href="#" class="footer__link">Help</a></li>
+          <li><a href="checkout.html" class="footer__link">Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Secured Payment Gateways</h3>
+        <p class="footer__description">Save 15% with Evara App & Payment Partner</p>
+        <img src="assets/img/payment-method.png" alt="" class="payment__img">
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p class="copyright">&copy; 2026 Evara. All rights reserved.</p>
+      <span class="designer">Designed with <span>&hearts;</span> for Fashion & Lifestyle</span>
+    </div>
+  </footer>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

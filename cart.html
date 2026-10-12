@@ -1,43 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
-    <link rel="stylesheet" href="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== FLATICON ===============-->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
-  </head>
-  <body>
-    <!--=============== HEADER ===============-->
-    <header class="header"></header>
+  <title>Shopping Cart - Evara Ecommerce</title>
+</head>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb"></section>
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <div class="header__top">
+      <div class="header__container container">
+        <div class="header__contact">
+          <span>(+92)-34260-51242</span>
+          <span>Our location</span>
+        </div>
+        <p class="header__alert-news">
+          Super Value Deals - Save more with coupons
+        </p>
+        <a href="login-register.html" class="header__top-action">
+          Log In / Sign Up
+        </a>
+      </div>
+    </div>
 
-      <!--=============== CART ===============-->
-      <section class="cart"></section>
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="assets/img/logo.svg" alt="">
+          </a>
+          <div class="nav__close" id="nav-close">
+            <i class="fi fi-rs-cross-small"></i>
+          </div>
+        </div>
 
-      <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter"></section>
-    </main>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer"></footer>
+          <li class="nav__item">
+            <a href="shop.html" class="nav__link">Shop</a>
+          </li>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+          <li class="nav__item">
+            <a href="accounts.html" class="nav__link">My Account</a>
+          </li>
 
-    <!--=============== MAIN JS ===============-->
-    <script src=""></script>
-  </body>
+          <li class="nav__item">
+            <a href="compare.html" class="nav__link">Compare</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="login-register.html" class="nav__link">Login</a>
+          </li>
+        </ul>
+
+        <div class="header__search">
+          <input type="text" placeholder="Search for items..." class="form__input">
+          <button class="search__btn">
+            <img src="assets/img/search.png" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="wishlist.html" class="header__action-btn">
+          <img src="assets/img/icon-heart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <a href="cart.html" class="header__action-btn">
+          <img src="assets/img/icon-cart.svg" alt="">
+          <span class="count">3</span>
+        </a>
+        <div class="header__action-btn nav__toggle" id="nav-toggle">
+          <img src="assets/img/menu-burger.svg" alt="">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <!--=============== BREADCRUMB ===============-->
+    <section class="breadcrumb">
+      <ul class="breadcrumb__list flex container">
+        <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><a href="shop.html" class="breadcrumb__link">Shop</a></li>
+        <li><span class="breadcrumb__item"><span>&gt;</span></span></li>
+        <li><span class="breadcrumb__link">Cart</span></li>
+      </ul>
+    </section>
+
+    <!--=============== CART ===============-->
+    <section class="cart section--lg container">
+      <div class="table__container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Item 1 -->
+            <tr>
+              <td><img src="assets/img/product-1-1.jpg" alt="" class="table__img"></td>
+              <td>
+                <a href="details.html" class="table__title">Colorful Pattern Shirts</a>
+                <p class="table__description">Size: M | Color: Teal</p>
+              </td>
+              <td><span class="table__price">$238.85</span></td>
+              <td>
+                <div class="quantity">
+                  <span class="quantity__btn quantity__minus"><i class="fi fi-rs-minus"></i></span>
+                  <input type="text" class="quantity__input" value="1" readonly>
+                  <span class="quantity__btn quantity__plus"><i class="fi fi-rs-plus"></i></span>
+                </div>
+              </td>
+              <td><span class="table__subtotal">$238.85</span></td>
+              <td><i class="fi fi-rs-trash table__trash" title="Remove item"></i></td>
+            </tr>
+
+            <!-- Item 2 -->
+            <tr>
+              <td><img src="assets/img/product-2-1.jpg" alt="" class="table__img"></td>
+              <td>
+                <a href="details.html" class="table__title">Plain Summer Cotton Tee</a>
+                <p class="table__description">Size: L | Color: White</p>
+              </td>
+              <td><span class="table__price">$120.25</span></td>
+              <td>
+                <div class="quantity">
+                  <span class="quantity__btn quantity__minus"><i class="fi fi-rs-minus"></i></span>
+                  <input type="text" class="quantity__input" value="2" readonly>
+                  <span class="quantity__btn quantity__plus"><i class="fi fi-rs-plus"></i></span>
+                </div>
+              </td>
+              <td><span class="table__subtotal">$240.50</span></td>
+              <td><i class="fi fi-rs-trash table__trash" title="Remove item"></i></td>
+            </tr>
+
+            <!-- Item 3 -->
+            <tr>
+              <td><img src="assets/img/product-3-1.jpg" alt="" class="table__img"></td>
+              <td>
+                <a href="details.html" class="table__title">Vintage Floral Blouse</a>
+                <p class="table__description">Size: S | Color: Floral Peach</p>
+              </td>
+              <td><span class="table__price">$175.00</span></td>
+              <td>
+                <div class="quantity">
+                  <span class="quantity__btn quantity__minus"><i class="fi fi-rs-minus"></i></span>
+                  <input type="text" class="quantity__input" value="1" readonly>
+                  <span class="quantity__btn quantity__plus"><i class="fi fi-rs-plus"></i></span>
+                </div>
+              </td>
+              <td><span class="table__subtotal">$175.00</span></td>
+              <td><i class="fi fi-rs-trash table__trash" title="Remove item"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cart__actions">
+        <a href="shop.html" class="btn btn--md btn--sub">
+          <i class="fi fi-rs-arrow-left"></i> Continue Shopping
+        </a>
+        <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+          <a href="#" class="btn btn--md btn--sub">
+            <i class="fi fi-rs-refresh"></i> Update Cart
+          </a>
+          <a href="#" class="btn btn--md btn--sub">
+            <i class="fi fi-rs-trash"></i> Clear Cart
+          </a>
+        </div>
+      </div>
+
+      <!--=============== CART OTHERS ===============-->
+      <div class="cart__group grid">
+        <!-- Calculate Shipping -->
+        <div class="cart__shipping">
+          <h3 class="section__title">Calculate <span>Shipping</span></h3>
+          <form action="" class="cart__shipping-form">
+            <div class="form__group">
+              <label class="form__label">Country</label>
+              <select class="form__input" style="background-color: var(--body-color); cursor: pointer;">
+                <option value="us">United States (US)</option>
+                <option value="uk">United Kingdom (UK)</option>
+                <option value="pk">Pakistan</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">State / Province</label>
+              <input type="text" placeholder="State / County" class="form__input">
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">PostCode / ZIP</label>
+              <input type="text" placeholder="Postal Code" class="form__input">
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn--md">Update Total</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Apply Coupon -->
+        <div class="cart__coupon">
+          <h3 class="section__title">Apply <span>Coupon</span></h3>
+          <form action="" class="cart__coupon-form">
+            <p style="font-size: var(--small-font-size); color: var(--text-color); margin-bottom: 0.5rem;">
+              Using a promo code? Enter it below to claim your special discount.
+            </p>
+            <div class="coupon__input-box">
+              <input type="text" placeholder="Enter Coupon Code" class="form__input">
+              <button type="submit" class="btn btn--md">Apply</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Cart Totals -->
+        <div class="cart__total">
+          <h3 class="section__title">Cart <span>Totals</span></h3>
+          <table class="cart__total-table">
+            <tbody>
+              <tr>
+                <td class="cart__total-title">Cart Subtotal</td>
+                <td class="cart__total-price">$654.35</td>
+              </tr>
+              <tr>
+                <td class="cart__total-title">Shipping</td>
+                <td class="cart__total-price" style="color: var(--title-color);">Free Shipping</td>
+              </tr>
+              <tr>
+                <td class="cart__total-title order__total-title">Order Total</td>
+                <td class="cart__total-price order__total-price">$654.35</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="checkout.html" class="btn btn--md">Proceed To Checkout</a>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== NEWSLETTER ===============-->
+    <section class="newsletter section">
+      <div class="newsletter__container container">
+        <div class="newsletter__content">
+          <h3 class="newsletter__title">
+            <img src="assets/img/icon-email.svg" alt="" class="newsletter__icon">
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and receive $25 coupon for first shopping.
+          </p>
+        </div>
+
+        <form action="" class="newsletter__form">
+          <input type="email" placeholder="Enter your email" class="newsletter__input" required>
+          <button type="submit" class="newsletter__btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+        </a>
+        <h4 class="footer__subtitle">Contact</h4>
+        <p class="footer__description">
+          <span>Address:</span> 562 Wellington Road, Street 32, San Francisco
+        </p>
+        <p class="footer__description">
+          <span>Phone:</span> (+92)-34260-51242 / (+01) 2345 6789
+        </p>
+        <p class="footer__description">
+          <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+        </p>
+        <div class="footer__social">
+          <h4 class="footer__subtitle">Follow Us</h4>
+          <div class="footer__social-links flex">
+            <a href="#"><img src="assets/img/icon-facebook.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-twitter.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-instagram.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-pinterest.svg" alt="" class="footer__social-icon"></a>
+            <a href="#"><img src="assets/img/icon-youtube.svg" alt="" class="footer__social-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Address</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">About Us</a></li>
+          <li><a href="#" class="footer__link">Delivery Information</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__link">Contact Us</a></li>
+          <li><a href="#" class="footer__link">Support Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">My Account</h3>
+        <ul class="footer__links">
+          <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+          <li><a href="cart.html" class="footer__link">View Cart</a></li>
+          <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+          <li><a href="accounts.html" class="footer__link">Track My Order</a></li>
+          <li><a href="#" class="footer__link">Help</a></li>
+          <li><a href="checkout.html" class="footer__link">Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Secured Payment Gateways</h3>
+        <p class="footer__description">Save 15% with Evara App & Payment Partner</p>
+        <img src="assets/img/payment-method.png" alt="" class="payment__img">
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p class="copyright">&copy; 2026 Evara. All rights reserved.</p>
+      <span class="designer">Designed with <span>&hearts;</span> for Fashion & Lifestyle</span>
+    </div>
+  </footer>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
